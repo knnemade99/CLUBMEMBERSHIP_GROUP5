@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html >
+<head>
+<script src="js/jquery.js"><</script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-cookies.js"></script>
+<script src="js/angular-cookies.min.js"></script>
+<script src="js/club.js"></script>
+<script src="js/custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.css"/>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/header.css"/>
+  <link href="css/round-about.css" rel="stylesheet">
+
+<meta charset="ISO-8859-1">
+<title>Club de Amigos</title>
+
+</head>
+<body ng-app="ClubMembershipApplication">
+<!--  Header Begins  -->
+   
+
+<div id="img">
+<nav class="navbar navbar-inverse navbar-static-top example6" id="nhead">
+
+ <div class="container">
+      <div class="navbar-header" >
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar6">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-hide" href="http://disputebills.com">Brand Text
+        </a>
+      </div>
+      <div id="navbar6" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right " >
+          <li class="active"  id="options"><a href="#/">Home</a></li>
+          <li id="options"><a href="#about">About</a></li>
+          <li  id="options"><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+   </div>
+    <!--/.container-fluid -->
+  </nav>
+ </div>
+<!-- Header Ends -->
+ 
+ 
+ <div ng-view="" onload="bodyload()">
+ </div>
+
+ 
+<div class="[ container text-center ]">
+    <div class="[ row ]">
+        <div class="[ col-xs-12 ]" style="padding-bottom: 30px;">
+          <div class="wrapper">
+    <div class="line"></div>
+    <div class="circle-2">
+        JOIN
+    </div>
+    <div class="circle">
+        JOIN
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="[ container text-center ]">
+	<div class="[ row ]">
+		<div class="[ col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 ]" role="tabpanel">
+            <div class="[ col-xs-4 col-sm-12 ]">
+                 
+                <ul class="[ nav nav-justified ]" id="nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#dustin" aria-controls="dustin" role="tab" data-toggle="tab">
+                            <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/dustinlamont/128.jpg" />
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="#daksh" aria-controls="daksh" role="tab" data-toggle="tab">
+                            <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/dakshbhagya/128.jpg" />
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="#anna" aria-controls="anna" role="tab" data-toggle="tab">
+                            <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/annapickard/128.jpg" />
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="">
+                        <a href="#wafer" aria-controls="wafer" role="tab" data-toggle="tab">
+                            <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/waferbaby/128.jpg" />
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="[ col-xs-8 col-sm-12 ]">
+              
+                <div class="tab-content" id="tabs-collapse">            
+                    <div role="tabpanel" class="tab-pane fade in active" id="dustin">
+                        <div class="tab-inner">                    
+                            <p class="lead">Etiam tincidunt enim et pretium efficitur. Donec auctor leo sollicitudin eros iaculis sollicitudin.</p>
+                            <hr>
+                            <p><strong class="text-uppercase">Dustin Lamont</strong></p>
+                                           
+                        </div>
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade" id="daksh">
+                        <div class="tab-inner">
+                            <p class="lead">Suspendisse dictum gravida est, nec consequat tortor venenatis a. Suspendisse vitae venenatis sapien.</p>
+                            <hr>
+                            <p><strong class="text-uppercase">Daksh Bhagya</strong></p>
+                            
+                        </div>
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade" id="anna">
+                        <div class="tab-inner">
+                            <p class="lead">Nullam suscipit ante ac arcu placerat, nec sagittis quam volutpat. Vestibulum aliquam facilisis velit ut ultrices.</p>
+                            <hr>
+                            <p><strong class="text-uppercase">Anna Pickard</strong></p>
+                          
+                        </div> 
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane fade" id="wafer">
+                        <div class="tab-inner">
+                            <p class="lead"> Fusce erat libero, fermentum quis sollicitudin id, venenatis nec felis. Morbi sollicitudin gravida finibus.</p>
+                            <hr>
+                            <p><strong class="text-uppercase">Wafer Baby</strong></p>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            
+      </div>
+      </div>
+      </div>
+      
+              
+<!-- Footer Begins -->
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Company<span>logo</span></h3>
+
+				<p class="footer-links">
+					<a href="#/">Home</a>
+					
+					<a href="#about">About</a>
+					
+					<a href="#contact">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Company Name &copy; 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Club de Amigos</span> Baner Road, Pune</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91-7697599287
+</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:knnemade99@gmail.com">support@clubdeamigos.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the Club</span>
+					<strong>Club de Amigos </strong>is a group of people formed for the purpose of playing sports. A club is solely created by its members, players and supporters. This club clubs the people together and bring them out of their daily work stress.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="www.facebook.com"><i class="fa fa-facebook"></i><img src="images/fb.png"></a>
+					<a href="www.twitter.com"><i class="fa fa-twitter"></i><img src="images/twitter.png"></a>
+					<a href="www.instagram.com"><i class="fa fa-linkedin"></i><img src="images/instagram.png"></a>
+					<a href="www.googleplus.com"><i class="fa fa-github"></i><img src="images/google_plus.png"></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+
+</body>
+</html>

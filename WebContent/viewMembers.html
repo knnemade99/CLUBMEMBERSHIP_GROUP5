@@ -1,0 +1,56 @@
+   
+<style>
+		table {
+	    width: 50%;
+	    margin-left: auto;
+	    margin-top: 10px;
+	    margin-right: auto;
+	    
+	}
+	th, td {
+	    padding: 1px;
+	    text-align: center;
+	    border-bottom: 1px solid #ddd;
+	}
+	/* input[type=text] {
+	    width: 20%;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    box-sizing: border-box;
+	    border: none;
+	    background-color: #00796B;
+	    color: white;
+	} */
+	input[type=button], input[type=submit], input[type=reset] {
+    	background-color: #ff3500 ;
+	    border: none;
+	    color: white;
+	    padding: 5px 15px;
+	    text-decoration: none;
+	    margin: 2px 2px;
+	    cursor: pointer;
+	}
+	
+	
+</style> 
+<div class="headall"></div>
+<div ng-init="checkStaffTransactions();viewMembersList()" class="container">
+
+<div class="table-responsive">
+<h2>Temporary Members</h2><br>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+	
+ </tr>
+<tr ng-repeat="activemember in tempMememberList">
+		
+		<td>{{ activemember.firstName }} {{activemember.lastName}}</td>
+		<td>{{ activemember.emailId }}</td>
+		<td><input type="button" value="View" ng-click="viewMember(activemember.id)"></td>
+		</tr>
+</table>
+</div>
+<br><br><br>
+</div>

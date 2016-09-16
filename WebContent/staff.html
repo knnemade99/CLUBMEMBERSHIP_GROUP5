@@ -1,0 +1,62 @@
+ <link rel="stylesheet" href="css/profile.css"> 
+<div class="headall"></div>  
+ <div class="container" ng-init='checkStaffTransactions();getStaffDetails();' style="margin-top:8%; margin-bottom:0">
+
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 " style="float:right;" >
+           <br><br><a href="#tempMem">Pending Request for Temporary Members</a><br><br>
+            <a href ="#permMem">Pending Request for Permanent Members</a><br><br>
+            <a href ="#permList">Permanent Member's List</a><br><br>
+            <a href ="#viewmembers">Temporary Member's List</a><br><br>
+             
+       <br>
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 toppad" style="float:left;" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Staff</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="images/profile.png" class="img-circle img-responsive"> </div>
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>First Name:</td>
+                        <td>{{fname}} {{lname}}</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td>{{email}}</td>
+                      </tr>
+                      <tr>
+                        <td>Mobile</td>
+                        <td>{{mobile}}</td>
+                      </tr>
+                   
+                         <tr>
+                             <tr>
+                        <td>Occupation</td>
+                        <td>{{occupation}}</td>
+                      </tr>
+                        <tr>
+                        <td>Date of Birth</td>
+                        <td>{{dob | date:'short'}}</td>
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                 
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="push"></div>

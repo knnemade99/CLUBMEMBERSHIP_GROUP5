@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="ClubMembershipApplication" >
+<head>
+	<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-cookies.min.js"></script>
+<script src="js/club.js"></script>
+	<title>Club de Amigos</title>
+	<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body ng-controller="ClubController" class="home">
+	<!-- navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button  -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="#/"><img src="images/logo.png" alt="" height="60px" width="auto" style="margin-bottom:10px;"></a>
+			</div>
+		
+		<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+				    <li ng-show="getCookie()" class="wel">Welcome {{ getName() }}</li>
+					<li ><a href="#/">Home</a></li>
+					<!-- <li><a href="#about">About</a></li> -->
+					<li><a href="#contact">Contact</a></li>
+					<li ng-hide="getCookie()"><a class="btn" href="#login">SIGN IN </a></li>
+					<li ng-hide="getCookie()"><a class="btn" href="#register"> SIGN UP</a></li>
+					<li ng-show="getCookie()"><a class="btn" href="" ng-click="getuser()">PROFILE</a></li>
+					<li ng-show="getCookie()"><a class="btn" ng-click="logout()"> SIGN OUT</a></li>
+			
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+<div ng-view="">
+ </div>
+	<footer id="footer">
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p>+91-7697599287<br>
+								<a href="mailto:#">club.amigos@gmail.com</a><br>
+								<br>
+								Club de Amigos,Baner Road,Pune
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow me</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href=""><i class="fa fa-twitter fa-2"></i></a>
+								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+								<a href=""><i class="fa fa-github fa-2"></i></a>
+								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Club de Amigos</h3>
+						<div class="widget-body">
+							<p>The mission of The Clud de Amigos is to enable Rotarians to advance world understanding, goodwill, and peace through the improvement of health. The Rotary Foundation helps fund our humanitarian activities, from local service projects to global initiatives. Rotarians and friends of Rotary support the Foundation�s work through voluntary contributions.</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="#/">Home</a> | 
+								<a href="#about">About</a> |
+								<a href="#contact">Contact</a> 
+								</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2016, Club De Amigos
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>	
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.js"></script> 
+	<script src="js/bootstrap.min.js"></script>
+	
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	<script src="js/bootbox.min.js"></script>
+</body>
+</html>

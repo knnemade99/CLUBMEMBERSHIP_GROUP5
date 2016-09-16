@@ -1,0 +1,29 @@
+
+<div class="headall"></div>
+<div class="container" ng-init="approveRegistrations()" style="margin-top:8%;">
+<table>
+  <tr>
+    
+    <th>Name</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Owner Name</th>
+    <th>Category</th>
+    <th>Price</th>
+    
+  </tr>
+<tr ng-repeat="product in pendingReq">
+		
+		
+		<td>{{ product.firstName }} {{ product.lastName }}</td>
+		<td>{{ product.emailId }}</td>
+		<td>{{ product.occupation }}</td>
+		<td>{{ product.registeredDate }}</td>
+		<td>{{ product.mobile }}</td>
+		
+		<td><input type="button" value="ADD" ng-click="add(product.emailId)"></td>
+		<td><input type="button" value="Reject" ng-click="reject(product.emailId)"></td>
+		
+		</tr>
+</table>
+</div>

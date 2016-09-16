@@ -1,0 +1,109 @@
+
+<div class="headall" ng-init="checkPageTransactions();getDate();"></div>
+  <div class="container" >
+    <div>
+      <div align="center">
+        <h3><strong>Register!</strong></h3>
+      </div>
+      <div class='panel-body'>
+        <form class='form-horizontal' role='form' name="signupform">
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_title'>*Name</label>
+            <div class='col-md-8'>
+              <div class='col-md-3'>
+                <div class='form-group internal'>
+                  <select class='form-control' id='id_title'>
+                    <option>Mr</option>
+                     <option>Ms</option>
+                    <option>Mrs</option>
+                  </select>
+                </div>
+              </div>
+              <div class='col-md-6 indent-small'>
+                <div class='form-group internal'>
+                  <input class='form-control' name='fname' id='id_first_name' placeholder='First Name'  ng-model="fname" type='text' required  />
+                  <span class="text-danger" ng-show="signupform.fname.$touched && signupform.fname.$invalid">First Name is required.</span>
+                
+                  <input class='form-control' name="lname" id='id_last_name' placeholder='Last Name' ng-model="lname" type='text' required/>
+                  <span class="text-danger" ng-show="signupform.lname.$touched && signupform.lname.$invalid">Last Name is required.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>*Contact</label>
+            <div class='col-md-6'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input class='form-control' name='email' id='id_email' placeholder='E-mail' ng-model="email" type='email' required/>
+                  <span class="text-danger" ng-show="signupform.email.$touched && signupform.email.$invalid"> Email is required.</span>
+                </div>
+                <div class='col-md-11'>
+                  <input class='form-control' id='id_phone' placeholder='Mobile' type='number' name="phone" ng-model="phone" ng-minlength="10" ng-maxlength="10" required/>
+                  <p class="text-danger" ng-show="(signupform.phone.$touched && signupform.phone.$invalid)||(signupform.phone.$error.minlength&&signupform.phone.$error.maxlength)">Enter 10 digit Mobile number</p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>*Date Of Birth</label>
+            <div class='col-md-8'>
+              <div class='col-md-3'>
+                <div class='form-group internal input-group'>
+
+                  <input type="date" id='dob' name='dob' ng-model='dob' class='form-control datepicker'  max='' required>
+                  <span class="text-danger" ng-show="signupform.dob.$touched && signupform.dob.$invalid">Valid Date is required.</span>
+                </div>
+              </div>
+          </div>
+		</div>
+       
+       
+		<div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Occupation</label>
+            <div class='col-md-8'>
+              <div class='col-md-6'>
+                <div class='form-group internal input-group'>
+                  <input type="text" class='form-control' id='id_phone' placeholder='Occupation' rows='3' name="occupation" ng-model="occupation">     
+                </div>
+              </div>
+          </div>
+		</div>
+       <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>*Password</label>
+            <div class='col-md-3'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input type="password" name='pass' placeholder="Password" id="pass" ng-model="pass" ng-minlength="8" ng-maxlength="20"  required/>
+                  <p  class="text-danger" ng-show="(signupform.pass.$touched&&signupform.pass.$invalid)||(signupform.pass.$error.minlength||signupform.pass.$error.maxlength)">8 to 20 characters required.</p>
+                  
+                </div>
+            </div>
+            </div>
+          </div>
+		  <div class='form-group'>
+            <label class='control-label col-md-2 col-md-offset-2' for='id_email'>*Confirm Password</label>
+            <div class='col-md-3'>
+              <div class='form-group'>
+                <div class='col-md-11'>
+                  <input type="password" name='pass2' placeholder="Confirm Password" id="pass2" ng-model="pass2" required/>
+                  <p class="text-danger" ng-show="(signupform.pass2.$viewValue != '' && (signupform.pass.$viewValue != signupform.pass2.$viewValue))">Fields do not match!</p>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class='form-group'>
+            <div class='col-md-offset-4 col-md-3'>
+              <button class='btn-lg btn-primary' type='button' ng-click="register()">Register</button>
+              
+            </div>
+            
+          </div>
+        </form>
+        <center><p class="text-danger"><strong>*</strong> These fields are required.</p></center>
+      </div>
+    </div>
+  </div>
+    

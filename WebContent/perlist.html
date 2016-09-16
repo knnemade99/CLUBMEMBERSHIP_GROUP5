@@ -1,0 +1,47 @@
+<div class="headall"></div>
+ <div class="container" ng-init="checkStaffTransactions();pendingPermReq();" style="margin-top:7%;">
+	<div class="row">
+	<br>
+
+        
+        <div class="col-md-12">
+
+       <h2>Permanent Membership Applicants</h2><br>
+        <div class="table-responsive">
+
+                
+              <table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+                   <th>First Name</th>
+                    <th>Email</th>
+                     <th>Occupation</th>
+                     <th>Mobile</th>
+                     <th>Registration Date</th>
+                      <th>Renewal Date</th>
+                       <th>Add</th>
+                       <th>Reject</th>
+                   </thead>
+    <tbody>
+    
+    <tr  ng-repeat="req in pendingPermReqs">
+    <td>{{ req.firstName }} {{req.lastName}}</td>
+    <td>{{ req.emailId }}</td>
+    <td>{{ req.occupation }}</td>
+    <td>{{ req.mobileNumber}}</td>
+    <td>{{ req.registeredDate |date:'medium' }}</td>
+    <td>{{ req.previousRenewalTime|date:'medium' }}</td>
+
+    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Add" ng-click="addPerm(req.id)"><span class="glyphicon glyphicon-plus"></span></button></p></td>
+
+    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Reject" ng-click="reject(req.emailId)" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+    </tr>
+  
+    </tbody>
+        
+</table>
+</div>
+</div>
+</div>
+<div class="push"></div>
+</div>

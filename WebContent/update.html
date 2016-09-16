@@ -1,0 +1,51 @@
+<div class="headall"></div>
+<div class="container" ng-controller="ClubController" ng-init='getAccountDetails()' style="margin-top:8%;">
+            <form class="form-horizontal" role="form" name='updateform'>
+                <h2>Update Your Details</h2>
+                <br>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label"> Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="fname" ng-readonly="true" ng-model="fname"  ng-edit="false" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="email" ng-readonly="true" placeholder="Email" ng-model="email"  class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="occupation" class="col-sm-3 control-label">Occupation</label>
+                    <div class="col-sm-9">
+                       <input type="text" id="occupation"   ng-model="occupation" placeholder="occupation" class="form-control" >
+                    </div>
+                </div>
+          
+                <div class="form-group">
+                    <label for="mobile" class="col-sm-3 control-label">Mobile No</label>
+                    <div class="col-sm-9">
+                        <input type="number" name='mobile' id="mobile"  ng-model="mobile" value=$scope.mobile placeholder="mobile" class="form-control" ng-minlength="10" ng-maxlength="10" required>
+                        <p class="text-danger" ng-show="(updateform.mobile.$touched && updateform.mobile.$invalid)||(signupform.phone.$error.minlength&&signupform.phone.$error.maxlength)">10 digits are required.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Registration</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="rdate" ng-readonly="true" ng-model="rdate" value=rdate class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">UserType</label>
+                    <div class="col-sm-9">
+                         <input type="text" id="user" ng-readonly="true" ng-model="user" value=$scope.userType placeholder="mobile" class="form-control">
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="button" class="btn btn-primary btn-block" ng-click="updateData()">Update</button>
+                        
+                    </div>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
